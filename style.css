@@ -1,0 +1,45 @@
+* { box-sizing: border-box; }
+    body {
+      font-family: sans-serif;
+      background: #f3f3f3;
+      padding: 30px;
+      background: linear-gradient(120deg, #6060e9 0%, rgb(148, 79, 212) 100%);
+    }
+    .app-title { text-align: center; margin-bottom: 20px; }
+
+    .todo-container {
+      max-width: 600px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    .input-section { display: flex; gap: 10px; margin-bottom: 20px; }
+    .input-section input,
+    .input-section select,
+    .input-section button { padding: 10px; font-size: 16px; }
+
+    .todo-list { display: flex; flex-direction: column; gap: 10px; }
+
+    .todo-item {
+      display: flex; align-items: center; gap: 10px;
+      background: #f9f9f9; padding: 10px; border-radius: 5px;
+    }
+    .todo-text { flex: 1; }
+
+    .todo-item.completed .todo-text { text-decoration: line-through; color: gray; }
+
+    .priority-high { color: red; font-weight: bold; }
+    .priority-medium { color: orange; }
+    .priority-low { color: green; }
+
+    .todo-checkbox { width: 24px; height: 24px; cursor: pointer; }
+
+    .filters { margin-top: 20px; display: flex; justify-content: space-between; }
+    .filters button { padding: 8px 12px; }
+    .filters .active { background: #6060e9; color: #fff; }
+
+    .stats { margin-top: 20px; font-size: 14px; }
+
+    /* utility */
+    .hidden { display: none !important; }
