@@ -131,7 +131,8 @@ if (e.target.matches('.edit-btn')) {
       priorityEl.classList.remove(`priority-${oldPriority}`);
       priorityEl.classList.add(`priority-${newPriority}`);
       priorityEl.textContent = newPriority;
-     sortTasksByPriority(); 
+      priorityEl.dataset.priority = newPriority;
+      sortTasksByPriority();
     }
   }
 }
