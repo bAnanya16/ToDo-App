@@ -16,6 +16,19 @@
       }
     };
 
+     const sortTasksByPriority = () => {
+       const rank = { high: 0, medium: 1, low: 2 };
+     
+       const items = Array.from(todoList.querySelectorAll('.todo-item'));
+     
+       items.sort((a, b) => {
+         const pa = a.querySelector('[class^="priority-"]').textContent.trim().toLowerCase();
+         const pb = b.querySelector('[class^="priority-"]').textContent.trim().toLowerCase();
+         return rank[pa] - rank[pb];
+       }); 
+       items.forEach(item => todoList.appendChild(item));
+    };
+
     const updateStats = () => {
       const allItems       = todoList.querySelectorAll('.todo-item');
       const completedItems = todoList.querySelectorAll('.todo-item.completed');
@@ -66,6 +79,7 @@
         </div>`;
 
       todoList.insertAdjacentHTML('beforeend', todoHTML);
+      sortTasksByPriority(); 
       updateStats();
       applyFilter(document.querySelector('.filter-btn.active').dataset.filter);
 
@@ -101,12 +115,12 @@ if (e.target.matches('.edit-btn')) {
   const priorityEl  = item.querySelector('[class^="priority-"]'); // label div
   const oldPriority = priorityEl.textContent.trim().toLowerCase();
 
-  // 1️⃣ Prompt for new task text
+  // Prompt for new task text
   const newText = prompt('Edit task:', textEl.textContent.trim());
   if (newText === null) return; // user hit “Cancel”
   if (newText.trim()) textEl.textContent = newText.trim();
 
-  // 2️⃣ Prompt for new priority
+  // Prompt for new priority
   let newPriority = prompt('Priority (low / medium / high):', oldPriority);
   if (newPriority !== null) {
     newPriority = newPriority.trim().toLowerCase();
@@ -115,6 +129,7 @@ if (e.target.matches('.edit-btn')) {
       priorityEl.classList.remove(`priority-${oldPriority}`);
       priorityEl.classList.add(`priority-${newPriority}`);
       priorityEl.textContent = newPriority;
+     sortTasksByPriority(); 
     }
   }
 }
