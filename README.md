@@ -1,7 +1,7 @@
 #Todo App - JavaScript
 A simple, modern, and interactive Todo App built with vanilla JavaScript, HTML, and CSS.
 Organize your daily tasks, set priorities, filter by status, and track your productivity—all in a clean, responsive interface.
-![Todo App Screenshot](IMAGES/todo app.png)
+<img width="954" alt="todo app" src="https://github.com/user-attachments/assets/c6324b78-f631-4d40-883e-d104e1409cba" />
 
 ✨ Features
 ·Add Tasks: Quickly add new tasks with a chosen priority (Low, Medium, High)
