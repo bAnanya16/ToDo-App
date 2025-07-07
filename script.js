@@ -16,18 +16,20 @@
       }
     };
 
-     const sortTasksByPriority = () => {
-       const rank = { high: 0, medium: 1, low: 2 };
-     
-       const items = Array.from(todoList.querySelectorAll('.todo-item'));
-     
-       items.sort((a, b) => {
-         const pa = a.querySelector('[class^="priority-"]').textContent.trim().toLowerCase();
-         const pb = b.querySelector('[class^="priority-"]').textContent.trim().toLowerCase();
-         return rank[pa] - rank[pb];
-       }); 
-       items.forEach(item => todoList.appendChild(item));
-    };
+   function sortTasksByPriority() {
+     const rank = { high: 0, medium: 1, low: 2 };
+   
+     const items = Array.from(todoList.querySelectorAll('.todo-item'));
+   
+     items.sort((a, b) => {
+       const pa = a.querySelector('.priority-badge').dataset.priority;
+       const pb = b.querySelector('.priority-badge').dataset.priority;
+       return rank[pa] - rank[pb];
+     });
+
+  items.forEach(item => todoList.appendChild(item));
+}
+
 
     const updateStats = () => {
       const allItems       = todoList.querySelectorAll('.todo-item');
@@ -73,7 +75,7 @@
         <div class="todo-item">
           <input type="checkbox" class="todo-checkbox" />
           <div class="todo-text">${taskText}</div>
-          <div class="priority-${priority}">${priority}</div>
+          <div class="priority-badge priority-${priority}"data-priority="${priority}">${priority}</div>
           <button class="action-btn edit-btn">Edit</button>
           <button class="action-btn del-btn">Delete</button>
         </div>`;
