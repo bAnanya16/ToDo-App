@@ -2,7 +2,9 @@
 
 A simple, modern, and interactive Todo App built with vanilla JavaScript, HTML, and CSS.
 Organize your daily tasks, set priorities, filter by status, and track your productivity—all in a clean, responsive interface.
+
 <img width="954" alt="todo app" src="https://github.com/user-attachments/assets/c6324b78-f631-4d40-883e-d104e1409cba" />
+
 
 ## ✨ Features
 
@@ -21,15 +23,21 @@ Organize your daily tasks, set priorities, filter by status, and track your prod
 ·**Live Stats**: See total, pending, completed tasks, and your completion rate
 
 ·**Responsive Design**: Works great on desktop and mobile
+<br>
+
 
 ## 🗂️ Project Structure
 
 **todo-app-js/**
 
 ├── index.html    # Main HTML file
+
 ├── style.css     # All app styles
+
 ├── script.js     # All JavaScript logic
+
 └── README.md     # Project documentation
+
 
 ## 🛠️ Usage
 
@@ -50,6 +58,7 @@ Use the filter buttons (All, Pending, Completed) to view tasks by status.
 **View Stats**:
 Stats update live as you manage your tasks.
 
+
 ## 💡 Customization
 
 **Persistence**:
@@ -60,10 +69,12 @@ You can extend it by adding localStorage support.
 All styles are in style.css.
 Feel free to tweak colors, fonts, or layout!
 
+
 ## 🙌 Contributing
 Contributions, suggestions, and improvements are welcome!
 
 Open an issue or submit a pull request.
+
 
 ## 📣 Acknowledgements
 
