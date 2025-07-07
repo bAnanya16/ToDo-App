@@ -1,5 +1,7 @@
 # Todo App 
 
+[Live Demo](https://bananya16.github.io/ToDo-App/)
+
 A simple, modern, and interactive Todo App built with vanilla JavaScript, HTML, and CSS.
 Organize your daily tasks, set priorities, filter by status, and track your productivity—all in a clean, responsive interface.
 
